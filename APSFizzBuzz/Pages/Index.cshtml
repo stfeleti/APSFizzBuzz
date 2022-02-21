@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "SEESA Submission";
+}
+
+
+<div class="container-fluid">
+    <div style="grid-column-start: 1; grid-column-end: 6;">
+        <h1>SEESA Submission - Fizz Buzz</h1>
+        <p>This follow prints numbers from 1 to 100 except for:</p>
+        <p>Multiples of 3 and 5 prints "FizzBuzz",</p>
+        <p>Multiples of 3  prints "Fizz" and</p>
+        <p>Multiples of 5 prints "Buzz"</p>
+    </div>
+    @foreach (var result in Model.Numbers)
+    {
+        <div class="card @(Model.GetCardClass(result))">
+            <div class="card-body">
+                <h3>@result</h3>
+            </div>
+        </div>
+
+    }
+</div>
+
